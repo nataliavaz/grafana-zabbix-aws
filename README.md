@@ -30,4 +30,6 @@ O resultado ser o dashboard abaixo:
 * policy_zabbix_monitor.json: Policy que deve ser utilizada ao usuário utilizado pelo Zabbix nas coletas.
 * policy_bucket.tpl: Policy que deve ser configurada nos buckets para verificação da Criptografia.
 
+Se tiverem dúvidas ou sugestões, segue meu contato:
+* https://www.linkedin.com/in/nataliavaz/
 
