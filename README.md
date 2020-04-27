@@ -10,7 +10,7 @@ O monitoramento do Zabbix e o Dashboard do Grafana foram configurados para uso e
 - Grafana 6.6.2
 - AWS Cli (os profiles monitorados deve ser configurados para o usuário local do Zabbix)
 
-O resultado ser o dashboard abaixo:
+O resultado será o dashboard abaixo:
 <img src="Grafana/dash.png">
 
 ### Diretórios:
