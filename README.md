@@ -21,7 +21,7 @@ O resultado será o dashboard abaixo:
 #### Zabbix:
 * userparameter_aws.conf: Configuração dos itens monitorados pelo Zabbix Agent.
 * aws: scripts utilizados pelos monitoramentos do Zabbix Trapper.
-* cron_aws.sh: Script com os monitoramentos coletados via Zabbix Trapper.
+* cron: scripts executados via cron
 * external scripts: Scripts utilizados pelos monitoramentos do Zabbix Agent.
 * zbx_export_templates.xml: Template a ser importado no Zabbix Server e vinculado aos hosts para monitoramento das contas.
 

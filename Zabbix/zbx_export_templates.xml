@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.4</version>
-    <date>2020-04-27T20:35:28Z</date>
+    <date>2020-05-12T22:18:40Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -11,7 +11,13 @@
         <template>
             <template>AWS Infra Compliance n Security</template>
             <name>AWS Infra Compliance n Security</name>
-            <description>This template gets some of items in the AWS infrastructure to show the number of resources uses and some important security checks.</description>
+            <description>This template gets some of items in the AWS infrastructure to show the number of resources uses and some important security checks.&#13;
+Created by: Victor Fonseca&#13;
+LinkedIn: https://www.linkedin.com/in/victorcfonseca/&#13;
+&#13;
+https://github.com/victorcfonseca/GrafanaDashboardAWS&#13;
+Adapted by: Natália Vaz&#13;
+LinkedIn: https://www.linkedin.com/in/nataliavaz/&#13;</description>
             <groups>
                 <group>
                     <name>Templates</name>
@@ -102,6 +108,13 @@
                             <name>Backup</name>
                         </application>
                     </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;0</expression>
+                            <name>Backup Failed - {EVENT.NAME}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
                     <name>Backup Suceed</name>
@@ -111,32 +124,6 @@
                     <applications>
                         <application>
                             <name>Backup</name>
-                        </application>
-                    </applications>
-                </item>
-                <item>
-                    <name>Billing Account</name>
-                    <type>EXTERNAL</type>
-                    <key>aws-billing-account.sh[{$PROFILE},{$ACCOUNT}]</key>
-                    <delay>1h</delay>
-                    <value_type>FLOAT</value_type>
-                    <units>USD</units>
-                    <applications>
-                        <application>
-                            <name>Billing</name>
-                        </application>
-                    </applications>
-                </item>
-                <item>
-                    <name>Billing Total</name>
-                    <type>EXTERNAL</type>
-                    <key>aws-billing.sh</key>
-                    <delay>1h</delay>
-                    <value_type>FLOAT</value_type>
-                    <units>USD</units>
-                    <applications>
-                        <application>
-                            <name>Billing</name>
                         </application>
                     </applications>
                 </item>
@@ -292,6 +279,7 @@
                     <type>TRAP</type>
                     <key>aws.redis.without.tag</key>
                     <delay>0</delay>
+                    <status>DISABLED</status>
                     <applications>
                         <application>
                             <name>TAG</name>
@@ -421,6 +409,32 @@
                     <applications>
                         <application>
                             <name>Backup</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Billing Account</name>
+                    <type>TRAP</type>
+                    <key>billing.account</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>USD</units>
+                    <applications>
+                        <application>
+                            <name>Billing</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Billing Total</name>
+                    <type>TRAP</type>
+                    <key>billing.total</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>USD</units>
+                    <applications>
+                        <application>
+                            <name>Billing</name>
                         </application>
                     </applications>
                 </item>
@@ -607,7 +621,7 @@
                     </applications>
                 </item>
                 <item>
-                    <name>Task Definition Name</name>
+                    <name>Task Definitions</name>
                     <key>task.prd[{$PROFILE},{$REGION}]</key>
                     <delay>3h</delay>
                     <applications>
