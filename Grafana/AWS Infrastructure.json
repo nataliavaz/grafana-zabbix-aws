@@ -71,7 +71,7 @@
   "gnetId": 139,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1587988817808,
+  "iteration": 1589371387953,
   "links": [],
   "panels": [
     {
@@ -320,7 +320,7 @@
       "legend": {
         "header": "Quantity",
         "percentage": true,
-        "percentageDecimals": null,
+        "percentageDecimals": 2,
         "show": true,
         "sideWidth": 300,
         "sort": "current",
@@ -3535,7 +3535,7 @@
             "filter": "$host"
           },
           "item": {
-            "filter": "Task Definition Name"
+            "filter": "Task Definitions"
           },
           "mode": 0,
           "options": {
@@ -3557,7 +3557,7 @@
       "thresholds": "0,1",
       "timeFrom": null,
       "timeShift": null,
-      "title": "Task Definition",
+      "title": "Task Definitions",
       "transparent": true,
       "type": "singlestat",
       "valueFontSize": "100%",
@@ -4621,7 +4621,7 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 2,
+        "x": 4,
         "y": 16
       },
       "hideTimeOverride": true,
@@ -4734,7 +4734,7 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 4,
+        "x": 6,
         "y": 16
       },
       "hideTimeOverride": true,
@@ -4847,7 +4847,7 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 6,
+        "x": 8,
         "y": 16
       },
       "hideTimeOverride": true,
@@ -4959,7 +4959,7 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 8,
+        "x": 10,
         "y": 16
       },
       "hideTimeOverride": true,
@@ -5071,7 +5071,7 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 10,
+        "x": 12,
         "y": 16
       },
       "hideTimeOverride": true,
@@ -5183,7 +5183,7 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 12,
+        "x": 14,
         "y": 16
       },
       "hideTimeOverride": true,
@@ -5295,7 +5295,7 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 14,
+        "x": 16,
         "y": 16
       },
       "hideTimeOverride": true,
@@ -5373,118 +5373,6 @@
       "timeFrom": null,
       "timeShift": null,
       "title": "Topics SNS",
-      "transparent": true,
-      "type": "singlestat",
-      "valueFontSize": "100%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorPrefix": false,
-      "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#C4162A"
-      ],
-      "datasource": "${DS_ZABBIX}",
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 2,
-        "x": 16,
-        "y": 16
-      },
-      "hideTimeOverride": true,
-      "id": 22,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": "",
-      "nullPointMode": "connected",
-      "nullText": null,
-      "options": {},
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "#FF9830",
-        "full": true,
-        "lineColor": "#FF9830",
-        "show": false,
-        "ymax": 1000,
-        "ymin": 0
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "application": {
-            "filter": "TAG"
-          },
-          "functions": [],
-          "group": {
-            "filter": "$group"
-          },
-          "host": {
-            "filter": "$host"
-          },
-          "item": {
-            "filter": "Nó Redis Sem TAG"
-          },
-          "mode": 0,
-          "options": {
-            "showDisabledItems": false,
-            "skipEmptyValues": false
-          },
-          "refId": "A",
-          "resultFormat": "time_series",
-          "table": {
-            "skipEmptyValues": false
-          },
-          "triggers": {
-            "acknowledged": 2,
-            "count": true,
-            "minSeverity": 3
-          }
-        }
-      ],
-      "thresholds": "1,2",
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Redis nodes",
       "transparent": true,
       "type": "singlestat",
       "valueFontSize": "100%",
@@ -5859,5 +5747,5 @@
   "timezone": "browser",
   "title": "AWS Infrastructure",
   "uid": "d7GbLVqWz",
-  "version": 84
+  "version": 87
 }
